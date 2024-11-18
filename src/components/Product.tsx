@@ -15,7 +15,7 @@ const Product = ({product, dispatch, REDUCER_ACTIONS, inCart}: PropsType): React
   // const img: string = new URL(`./../images/product` + product.id + ".png", import.meta.url).href
   const img: string = new URL(`${product.images[0]}`).href
 
-  const onAddToCart = () => dispatch({type: REDUCER_ACTIONS.ADD, payload: { ...product, qty: 1}})
+  const onAddToCart = () => dispatch({type: REDUCER_ACTIONS.ADD, payload: { ...product, imageURL: product.images[0], qty: 1}})
 
   const itemInCart = inCart ? ' → Item in Cart: ✔️' : null
 

@@ -12,7 +12,6 @@ const ProductList = () => {
   if (products?.length) {
     pageContent = products.map((product) => {
       const inCart: boolean = cart.some((item) => item.sku === product.sku);
-      // console.log("prod sku: ", product.sku)
 
       return (
         <Product
